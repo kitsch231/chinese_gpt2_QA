@@ -1,0 +1,237 @@
+2023-02-17 10:56:47,584 - INFO - using device:cuda:0
+2023-02-17 10:56:49,420 - INFO - model config:
+{
+  "_name_or_path": "premodel",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "gradient_checkpointing": false,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "output_past": true,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 400
+    }
+  },
+  "tokenizer_class": "BertTokenizer",
+  "torch_dtype": "float32",
+  "transformers_version": "4.25.1",
+  "use_cache": true,
+  "vocab_size": 21128
+}
+
+2023-02-17 10:56:49,422 - INFO - number of model parameters: 102068736
+2023-02-17 10:56:49,422 - INFO - args:Namespace(batch_size=8, cls_id=101, cuda=True, device='cuda:0', epochs=40, eps=1e-08, gpu0_bsz=10, gradient_accumulation_steps=4, ignore_index=-100, log=True, log_path='data/train.log', log_step=100, lr=2.6e-05, max_grad_norm=2.0, max_len=250, model_config='config/config.json', no_cuda=False, num_workers=0, pad_id=0, patience=0, pretrained_model='premodel', save_model_path='model', sep_id=102, train_path='data/train.pkl', val_num=4000, vocab_path='vocab/vocab.txt', warmup_steps=4000)
+2023-02-17 10:56:49,423 - INFO - loading training dataset and validating dataset
+2023-02-17 10:56:49,995 - INFO - starting training
+2023-02-17 10:57:10,190 - INFO - batch 100 of epoch 1, loss 2.8777778148651123, batch_acc 0.3995510662177329, lr [1.625e-07]
+2023-02-17 10:57:29,650 - INFO - batch 200 of epoch 1, loss 2.841622829437256, batch_acc 0.406, lr [3.25e-07]
+2023-02-17 10:57:49,322 - INFO - batch 300 of epoch 1, loss 3.3279387950897217, batch_acc 0.35106382978723405, lr [4.875e-07]
+2023-02-17 10:58:08,859 - INFO - batch 400 of epoch 1, loss 2.7484207153320312, batch_acc 0.4099883855981417, lr [6.5e-07]
+2023-02-17 10:58:28,600 - INFO - batch 500 of epoch 1, loss 3.3051037788391113, batch_acc 0.357307249712313, lr [8.125e-07]
+2023-02-17 10:58:48,253 - INFO - batch 600 of epoch 1, loss 3.2931251525878906, batch_acc 0.3563799887577291, lr [9.75e-07]
+2023-02-17 10:59:08,060 - INFO - batch 700 of epoch 1, loss 3.048910617828369, batch_acc 0.35995436394751856, lr [1.1375e-06]
+2023-02-17 10:59:27,941 - INFO - batch 800 of epoch 1, loss 2.9183335304260254, batch_acc 0.4007177033492823, lr [1.3e-06]
+2023-02-17 10:59:48,347 - INFO - batch 900 of epoch 1, loss 3.221701145172119, batch_acc 0.3723776223776224, lr [1.4625e-06]
+2023-02-17 11:00:08,179 - INFO - batch 1000 of epoch 1, loss 2.845066547393799, batch_acc 0.4135876042908224, lr [1.625e-06]
+2023-02-17 11:00:28,014 - INFO - batch 1100 of epoch 1, loss 2.901838541030884, batch_acc 0.40274463007159905, lr [1.7875e-06]
+2023-02-17 11:00:47,844 - INFO - batch 1200 of epoch 1, loss 3.1333935260772705, batch_acc 0.3641394576646375, lr [1.95e-06]
+2023-02-17 11:01:07,914 - INFO - batch 1300 of epoch 1, loss 3.6591084003448486, batch_acc 0.3196271929824561, lr [2.1125e-06]
+2023-02-17 11:01:27,678 - INFO - batch 1400 of epoch 1, loss 3.179190158843994, batch_acc 0.34654654654654654, lr [2.275e-06]
+2023-02-17 11:01:47,368 - INFO - batch 1500 of epoch 1, loss 2.890321731567383, batch_acc 0.4109916367980884, lr [2.4375e-06]
+2023-02-17 11:02:07,307 - INFO - batch 1600 of epoch 1, loss 3.267460823059082, batch_acc 0.3710618436406068, lr [2.6e-06]
+2023-02-17 11:02:27,206 - INFO - batch 1700 of epoch 1, loss 3.283259868621826, batch_acc 0.350844277673546, lr [2.7625e-06]
+2023-02-17 11:02:47,130 - INFO - batch 1800 of epoch 1, loss 2.773956060409546, batch_acc 0.42786985880908535, lr [2.925e-06]
+2023-02-17 11:03:07,199 - INFO - batch 1900 of epoch 1, loss 3.17834734916687, batch_acc 0.3719776813391196, lr [3.0874999999999997e-06]
+2023-02-17 11:03:26,938 - INFO - batch 2000 of epoch 1, loss 2.97467303276062, batch_acc 0.3894609327680194, lr [3.25e-06]
+2023-02-17 11:03:46,845 - INFO - batch 2100 of epoch 1, loss 2.9158554077148438, batch_acc 0.3829787234042553, lr [3.4125e-06]
+2023-02-17 11:04:06,911 - INFO - batch 2200 of epoch 1, loss 2.940035581588745, batch_acc 0.3879154078549849, lr [3.575e-06]
+2023-02-17 11:04:26,868 - INFO - batch 2300 of epoch 1, loss 3.288809299468994, batch_acc 0.3708530805687204, lr [3.7374999999999994e-06]
+2023-02-17 11:04:46,889 - INFO - batch 2400 of epoch 1, loss 2.89485502243042, batch_acc 0.37785588752196836, lr [3.9e-06]
+2023-02-17 11:05:06,770 - INFO - batch 2500 of epoch 1, loss 2.9678823947906494, batch_acc 0.3837551500882872, lr [4.0625e-06]
+2023-02-17 11:05:26,715 - INFO - batch 2600 of epoch 1, loss 2.7948319911956787, batch_acc 0.42392638036809815, lr [4.225e-06]
+2023-02-17 11:05:46,656 - INFO - batch 2700 of epoch 1, loss 3.3701884746551514, batch_acc 0.34715346534653463, lr [4.3875e-06]
+2023-02-17 11:06:06,684 - INFO - batch 2800 of epoch 1, loss 3.0422885417938232, batch_acc 0.39965889710062535, lr [4.55e-06]
+2023-02-17 11:06:26,696 - INFO - batch 2900 of epoch 1, loss 3.37182879447937, batch_acc 0.32376298106291995, lr [4.712499999999999e-06]
+2023-02-17 11:06:46,762 - INFO - batch 3000 of epoch 1, loss 3.120852470397949, batch_acc 0.36913145539906106, lr [4.875e-06]
+2023-02-17 11:07:06,774 - INFO - batch 3100 of epoch 1, loss 3.372718572616577, batch_acc 0.35034403669724773, lr [5.0375e-06]
+2023-02-17 11:07:26,738 - INFO - batch 3200 of epoch 1, loss 3.07208514213562, batch_acc 0.36901241868716733, lr [5.2e-06]
+2023-02-17 11:07:46,795 - INFO - batch 3300 of epoch 1, loss 3.0189614295959473, batch_acc 0.3862793572311496, lr [5.362499999999999e-06]
+2023-02-17 11:08:06,948 - INFO - batch 3400 of epoch 1, loss 2.831515073776245, batch_acc 0.4139620330679731, lr [5.525e-06]
+2023-02-17 11:08:26,813 - INFO - batch 3500 of epoch 1, loss 3.0158908367156982, batch_acc 0.36930455635491605, lr [5.687499999999999e-06]
+2023-02-17 11:08:46,726 - INFO - batch 3600 of epoch 1, loss 2.745840549468994, batch_acc 0.3984753984753985, lr [5.85e-06]
+2023-02-17 11:09:06,812 - INFO - batch 3700 of epoch 1, loss 3.1052300930023193, batch_acc 0.3670179789212647, lr [6.0125e-06]
+2023-02-17 11:09:26,775 - INFO - batch 3800 of epoch 1, loss 3.2355477809906006, batch_acc 0.35803136830719307, lr [6.174999999999999e-06]
+2023-02-17 11:09:46,862 - INFO - batch 3900 of epoch 1, loss 3.08732271194458, batch_acc 0.37708830548926014, lr [6.3375e-06]
+2023-02-17 11:10:06,997 - INFO - batch 4000 of epoch 1, loss 3.4162509441375732, batch_acc 0.338943702843877, lr [6.5e-06]
+2023-02-17 11:10:27,096 - INFO - batch 4100 of epoch 1, loss 2.848395824432373, batch_acc 0.4079173838209983, lr [6.662499999999999e-06]
+2023-02-17 11:10:47,162 - INFO - batch 4200 of epoch 1, loss 3.166078805923462, batch_acc 0.3713962690785755, lr [6.825e-06]
+2023-02-17 11:11:07,163 - INFO - batch 4300 of epoch 1, loss 3.51607346534729, batch_acc 0.31685527099463967, lr [6.9875e-06]
+2023-02-17 11:11:27,316 - INFO - batch 4400 of epoch 1, loss 3.0185158252716064, batch_acc 0.3866506313890559, lr [7.15e-06]
+2023-02-17 11:11:47,310 - INFO - batch 4500 of epoch 1, loss 2.9332492351531982, batch_acc 0.4041420118343195, lr [7.3125e-06]
+2023-02-17 11:12:07,282 - INFO - batch 4600 of epoch 1, loss 3.0174355506896973, batch_acc 0.3862876254180602, lr [7.474999999999999e-06]
+2023-02-17 11:12:27,535 - INFO - batch 4700 of epoch 1, loss 2.6385631561279297, batch_acc 0.43243243243243246, lr [7.6375e-06]
+2023-02-17 11:12:47,765 - INFO - batch 4800 of epoch 1, loss 2.7352073192596436, batch_acc 0.41277641277641275, lr [7.8e-06]
+2023-02-17 11:13:08,011 - INFO - batch 4900 of epoch 1, loss 3.079580545425415, batch_acc 0.37192118226600984, lr [7.9625e-06]
+2023-02-17 11:13:28,158 - INFO - batch 5000 of epoch 1, loss 2.7887156009674072, batch_acc 0.40559440559440557, lr [8.125e-06]
+2023-02-17 11:13:48,244 - INFO - batch 5100 of epoch 1, loss 3.095600128173828, batch_acc 0.3854099418979987, lr [8.287499999999998e-06]
+2023-02-17 11:14:08,293 - INFO - batch 5200 of epoch 1, loss 3.4299159049987793, batch_acc 0.343497199751089, lr [8.45e-06]
+2023-02-17 11:14:28,570 - INFO - batch 5300 of epoch 1, loss 2.7067251205444336, batch_acc 0.42787583688374925, lr [8.6125e-06]
+2023-02-17 11:14:48,735 - INFO - batch 5400 of epoch 1, loss 3.2600550651550293, batch_acc 0.371411117898595, lr [8.775e-06]
+2023-02-17 11:15:09,071 - INFO - batch 5500 of epoch 1, loss 3.2090461254119873, batch_acc 0.36783042394014964, lr [8.937499999999999e-06]
+2023-02-17 11:15:29,313 - INFO - batch 5600 of epoch 1, loss 2.6278269290924072, batch_acc 0.4426125554850983, lr [9.1e-06]
+2023-02-17 11:15:49,480 - INFO - batch 5700 of epoch 1, loss 2.783588171005249, batch_acc 0.40500916310323765, lr [9.2625e-06]
+2023-02-17 11:16:09,640 - INFO - batch 5800 of epoch 1, loss 2.9358091354370117, batch_acc 0.3873318385650224, lr [9.424999999999999e-06]
+2023-02-17 11:16:30,013 - INFO - batch 5900 of epoch 1, loss 3.176741123199463, batch_acc 0.3594578668238067, lr [9.5875e-06]
+2023-02-17 11:16:50,129 - INFO - batch 6000 of epoch 1, loss 2.9465861320495605, batch_acc 0.41077844311377243, lr [9.75e-06]
+2023-02-17 11:17:10,248 - INFO - batch 6100 of epoch 1, loss 3.105926513671875, batch_acc 0.37359900373599003, lr [9.912499999999999e-06]
+2023-02-17 11:17:30,481 - INFO - batch 6200 of epoch 1, loss 3.223757266998291, batch_acc 0.36184971098265895, lr [1.0075e-05]
+2023-02-17 11:17:50,719 - INFO - batch 6300 of epoch 1, loss 3.2327234745025635, batch_acc 0.3547815820543093, lr [1.02375e-05]
+2023-02-17 11:18:10,921 - INFO - batch 6400 of epoch 1, loss 3.0094547271728516, batch_acc 0.38433066008636646, lr [1.04e-05]
+2023-02-17 11:18:31,051 - INFO - batch 6500 of epoch 1, loss 3.2576191425323486, batch_acc 0.36628945801072066, lr [1.05625e-05]
+2023-02-17 11:18:51,247 - INFO - batch 6600 of epoch 1, loss 3.3199076652526855, batch_acc 0.34499110847658565, lr [1.0724999999999998e-05]
+2023-02-17 11:19:11,403 - INFO - batch 6700 of epoch 1, loss 2.7589964866638184, batch_acc 0.4149305555555556, lr [1.08875e-05]
+2023-02-17 11:19:31,612 - INFO - batch 6800 of epoch 1, loss 3.190917730331421, batch_acc 0.37407195888063965, lr [1.105e-05]
+2023-02-17 11:19:35,382 - INFO - epoch 1: loss 3.110829408715278, predict_acc 0.3749086252921349
+2023-02-17 11:19:35,383 - INFO - saving model for epoch 1
+2023-02-17 11:19:36,041 - INFO - epoch 1 finished
+2023-02-17 11:19:36,041 - INFO - time for one epoch: 0:22:46.045556
+2023-02-17 11:19:36,041 - INFO - start validating
+2023-02-17 11:20:09,786 - INFO - validate epoch 1: loss 3.231085457801819
+2023-02-17 11:20:09,786 - INFO - time for validating one epoch: 0:00:33.744560
+2023-02-17 11:20:09,786 - INFO - saving current best model for epoch 1
+2023-02-17 11:20:30,719 - INFO - batch 100 of epoch 2, loss 3.2078135013580322, batch_acc 0.36303030303030304, lr [1.12385e-05]
+2023-02-17 11:20:51,038 - INFO - batch 200 of epoch 2, loss 3.51619553565979, batch_acc 0.33672248803827753, lr [1.1401e-05]
+2023-02-17 11:21:20,949 - INFO - batch 300 of epoch 2, loss 3.408207893371582, batch_acc 0.33636363636363636, lr [1.1563499999999999e-05]
+2023-02-17 11:22:10,287 - INFO - batch 400 of epoch 2, loss 2.994499921798706, batch_acc 0.36815607300188796, lr [1.1726e-05]
+2023-02-17 11:23:06,596 - INFO - batch 500 of epoch 2, loss 3.0907840728759766, batch_acc 0.3760379596678529, lr [1.18885e-05]
+2023-02-17 11:23:47,968 - INFO - batch 600 of epoch 2, loss 3.1089818477630615, batch_acc 0.3562130177514793, lr [1.2051e-05]
+2023-02-17 11:24:08,285 - INFO - batch 700 of epoch 2, loss 2.8126935958862305, batch_acc 0.413854351687389, lr [1.22135e-05]
+2023-02-17 11:24:28,472 - INFO - batch 800 of epoch 2, loss 3.2154200077056885, batch_acc 0.3470483005366726, lr [1.2375999999999998e-05]
+2023-02-17 11:24:49,129 - INFO - batch 900 of epoch 2, loss 3.166782855987549, batch_acc 0.3795416433761878, lr [1.25385e-05]
+2023-02-17 11:25:09,788 - INFO - batch 1000 of epoch 2, loss 3.0004377365112305, batch_acc 0.38848039215686275, lr [1.2701e-05]
+2023-02-17 11:25:30,252 - INFO - batch 1100 of epoch 2, loss 2.8549611568450928, batch_acc 0.39107457428068115, lr [1.28635e-05]
+2023-02-17 11:25:50,845 - INFO - batch 1200 of epoch 2, loss 3.039160966873169, batch_acc 0.37026239067055394, lr [1.3025999999999999e-05]
+2023-02-17 11:46:13,515 - INFO - using device:0,1
+2023-02-17 11:48:57,972 - INFO - using device:cuda:0
+2023-02-17 11:48:59,792 - INFO - model config:
+{
+  "_name_or_path": "premodel",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "gradient_checkpointing": false,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "output_past": true,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 400
+    }
+  },
+  "tokenizer_class": "BertTokenizer",
+  "torch_dtype": "float32",
+  "transformers_version": "4.25.1",
+  "use_cache": true,
+  "vocab_size": 21128
+}
+
+2023-02-17 11:48:59,795 - INFO - number of model parameters: 102068736
+2023-02-17 11:48:59,795 - INFO - args:Namespace(batch_size=8, cls_id=101, cuda=True, device='cuda:0', epochs=40, eps=1e-08, gpu0_bsz=10, gradient_accumulation_steps=4, ignore_index=-100, log=True, log_path='data/train.log', log_step=100, lr=2.6e-05, max_grad_norm=2.0, max_len=250, model_config='config/config.json', no_cuda=False, num_workers=0, pad_id=0, patience=0, pretrained_model='premodel', save_model_path='model', sep_id=102, train_path='data/train.pkl', val_num=4000, vocab_path='vocab/vocab.txt', warmup_steps=4000)
+2023-02-17 11:48:59,795 - INFO - loading training dataset and validating dataset
+2023-02-17 11:49:00,367 - INFO - starting training
+2023-02-17 12:01:14,011 - INFO - using device:cuda:0
+2023-02-17 12:01:15,877 - INFO - model config:
+{
+  "_name_or_path": "premodel",
+  "activation_function": "gelu_new",
+  "architectures": [
+    "GPT2LMHeadModel"
+  ],
+  "attn_pdrop": 0.1,
+  "bos_token_id": 50256,
+  "embd_pdrop": 0.1,
+  "eos_token_id": 50256,
+  "gradient_checkpointing": false,
+  "initializer_range": 0.02,
+  "layer_norm_epsilon": 1e-05,
+  "model_type": "gpt2",
+  "n_ctx": 1024,
+  "n_embd": 768,
+  "n_head": 12,
+  "n_inner": null,
+  "n_layer": 12,
+  "n_positions": 1024,
+  "output_past": true,
+  "reorder_and_upcast_attn": false,
+  "resid_pdrop": 0.1,
+  "scale_attn_by_inverse_layer_idx": false,
+  "scale_attn_weights": true,
+  "summary_activation": null,
+  "summary_first_dropout": 0.1,
+  "summary_proj_to_labels": true,
+  "summary_type": "cls_index",
+  "summary_use_proj": true,
+  "task_specific_params": {
+    "text-generation": {
+      "do_sample": true,
+      "max_length": 400
+    }
+  },
+  "tokenizer_class": "BertTokenizer",
+  "torch_dtype": "float32",
+  "transformers_version": "4.25.1",
+  "use_cache": true,
+  "vocab_size": 21128
+}
+
+2023-02-17 12:01:15,880 - INFO - number of model parameters: 102068736
+2023-02-17 12:01:15,880 - INFO - args:Namespace(batch_size=8, cls_id=101, cuda=True, device='cuda:0', epochs=40, eps=1e-08, gpu0_bsz=10, gradient_accumulation_steps=4, ignore_index=-100, log=True, log_path='data/train.log', log_step=100, lr=2.6e-05, max_grad_norm=2.0, max_len=250, model_config='config/config.json', no_cuda=False, num_workers=0, pad_id=0, patience=0, pretrained_model='premodel', save_model_path='model', sep_id=102, train_path='data/train.pkl', val_num=4000, vocab_path='vocab/vocab.txt', warmup_steps=4000)
+2023-02-17 12:01:15,880 - INFO - loading training dataset and validating dataset
+2023-02-17 12:01:16,457 - INFO - starting training
+2023-02-17 12:01:36,667 - INFO - batch 100 of epoch 1, loss 3.0189669132232666, batch_acc 0.378596087456847, lr [1.625e-07]
